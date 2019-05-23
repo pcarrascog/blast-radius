@@ -15,7 +15,7 @@
 #Implementation notes
 # Using ubuntu (rather than alpine) base image due to problems with graphviz fonts on alpine
 
-FROM ubuntu:17.10
+FROM ubuntu:18.10
 
 #define default terraform version in environment var
 ENV TF_VERSION "0.11.13"
