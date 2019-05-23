@@ -47,10 +47,10 @@ RUN pip3 install pyhcl
 RUN pip3 install -e .
 
 # install terraform plugins Gsuite
-RUN wget https://github.com/DeviaVir/terraform-provider-gsuite/releases/download/v0.1.19/terraform-provider-gsuite_0.1.19_linux_amd64.tgz \
-    tar -xvf terraform-provider-gsuite_0.1.19_linux_amd64.tgz \
-    mkdir -p $HOME/.terraform.d/plugins \
-    mv terraform-provider-gsuite $HOME/.terraform.d/plugins/terraform-provider-gsuite
+RUN wget https://github.com/DeviaVir/terraform-provider-gsuite/releases/download/v0.1.19/terraform-provider-gsuite_0.1.19_linux_amd64.tgz 
+    && \ tar -xvf terraform-provider-gsuite_0.1.19_linux_amd64.tgz 
+    && \ mkdir -p $HOME/.terraform.d/plugins 
+    && \ mv terraform-provider-gsuite $HOME/.terraform.d/plugins/terraform-provider-gsuite
 
 #set up entrypoint script
 RUN chmod +x ./docker-entrypoint.sh
