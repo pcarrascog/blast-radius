@@ -43,6 +43,7 @@ RUN chmod +x ./docker-build.sh \
     && ./docker-build.sh /src
 
 #create blast-radius package from source
+RUN pip3 install pyhcl
 RUN pip3 install -e .
 
 # install terraform plugins Gsuite
