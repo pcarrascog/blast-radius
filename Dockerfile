@@ -51,7 +51,7 @@ RUN wget https://github.com/DeviaVir/terraform-provider-gsuite/releases/download
 RUN tar -xvf terraform-provider-gsuite_0.1.19_linux_amd64.tgz 
 RUN ls -ltr 
 RUN mkdir -p $HOME/.terraform.d/plugins
-RUN mv terraform-provider-gsuite $HOME/.terraform.d/plugins/terraform-provider-gsuite
+RUN mv terraform-provider-gsuite $HOME/.terraform.d/plugins/.
 
 #set up entrypoint script
 RUN chmod +x ./docker-entrypoint.sh
