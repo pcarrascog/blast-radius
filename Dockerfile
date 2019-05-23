@@ -49,9 +49,8 @@ RUN pip3 install -e .
 # install terraform plugins Gsuite
 RUN wget https://github.com/DeviaVir/terraform-provider-gsuite/releases/download/v0.1.19/terraform-provider-gsuite_0.1.19_linux_amd64.tgz
 RUN tar -xvf terraform-provider-gsuite_0.1.19_linux_amd64.tgz 
-RUN ls -ltr 
 RUN mkdir -p $HOME/.terraform.d/plugins
-RUN mv terraform-provider-gsuite_v0.1.19 $HOME/.terraform.d/plugins/terraform-provider-gsuite
+RUN mv terraform-provider-gsuite_v0.1.19 $HOME/.terraform.d/plugins/linux_amd64/terraform-provider-gsuite
 
 #set up entrypoint script
 RUN chmod +x ./docker-entrypoint.sh
